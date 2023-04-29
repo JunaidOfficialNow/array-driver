@@ -7,12 +7,11 @@ export function updateObjectInArray(this: Array<any>, searchCriteria: searchCrit
   if (index === -1) {
     return false;
   }
-  let updateValue: any = updateCriteria;
-
   if(typeof updateCriteria == 'function') {
-    updateValue = updateCriteria(this[index]);
+    updateCriteria(this[index]);
+    return true;
   }
 
-  this[index] = updateValue;
+  this[index] = updateCriteria;
   return true;
 }
