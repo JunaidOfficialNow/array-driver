@@ -1,4 +1,4 @@
-const findOneAndUpdate = require('./utils/findOneAndUpdate');
+const {findOneAndUpdate} = require('./utils/findOneAndUpdate');
 
 module.exports = {
   findOneAndUpdate,
