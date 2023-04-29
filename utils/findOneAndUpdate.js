@@ -1,4 +1,7 @@
 exports.findOneAndUpdate = function(array, searchValue, updateValue) {
+  if (array ==  undefined) {
+    array = this;
+  }
   let index;
   if (typeof searchValue === 'function') {
     index = array.findIndex(searchValue)
