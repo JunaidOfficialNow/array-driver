@@ -8,6 +8,14 @@ You can install array-driver using NPM:
 npm install array-driver
 ```
 ### Usage
+First configure the package
+
+```js
+const arrayDriver = require('array-driver');
+arrayDriver.config();
+```
+Then start using the functions
+
 ```js
 array.findOneAndUpdate(searchValue, updateValue);
 // This function searches for the searchValue in the given array. If it finds the value, it updates it with targetValue and returns true. Otherwise, it returns false.
