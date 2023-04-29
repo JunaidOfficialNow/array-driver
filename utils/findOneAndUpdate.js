@@ -11,10 +11,8 @@ exports.findOneAndUpdate = function(array, searchValue, updateValue) {
 
 
   if (index === -1) {
-    return array;
+    return false;
   }
-  
-  const updatedArray = [...array];
-  updatedArray[index] = updateValue;
-  return updatedArray;
+  array[index] = updateValue;
+  return true;
 }
