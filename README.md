@@ -9,7 +9,7 @@ npm install array-driver
 ```
 ### Usage
 ```js
-findOneAndUpdate( searchValue: any, targetValue: any, array: any[],): boolean
+array.findOneAndUpdate(searchValue, updateValue);
 // This function searches for the searchValue in the given array. If it finds the value, it updates it with targetValue and returns true. Otherwise, it returns false.
 
 ```
