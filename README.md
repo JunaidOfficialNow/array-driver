@@ -40,6 +40,62 @@ console.log(result); // Output: true
 
 ```
 
+## if your value is an object or array pass a callback with search criteria
+```js
+const { findOneAndUpdate } = require('array-driver');
+
+// adding method to the array prototype
+Array.prototype.findOneAndUpdate = findOneAndUpdate;
+
+const myArray = [
+  {
+    name: 'junaid',
+    age: 20
+  },
+  {
+    name: 'abin',
+    age: 21,
+  },
+  {
+  name: 'ragesh',
+  age: 22,
+  },
+  {
+    name: 'ajul',
+    age: 30,
+  },
+];
+const updateObject = {
+  name: 'munawer',
+  age: 40,
+}
+
+// pass callback if the searchItem is not primitive value
+const result = myArray.findOneAndUpdate(user => user.name == 'junaid', updateObject);
+
+console.log(myArray);
+// const myArray = [
+//  {
+//   name: 'munawer',
+//   age: 40,
+//  },
+//   {
+//     name: 'abin',
+//     age: 21,
+//   },
+//   {
+//   name: 'ragesh',
+//   age: 22,
+//   },
+//   {
+//     name: 'ajul',
+//     age: 30,
+//   },
+// ];
+console.log(result); // Output: true
+
+```
+
 ```js
 const { findOneAndUpdate } = require('array-driver');
 
