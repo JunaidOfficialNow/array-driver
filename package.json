@@ -1,0 +1,33 @@
+{
+  "name": "array-driver",
+  "version": "1.0.0",
+  "description": "'useful custom array methods'",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junaidofficialnow/array-driver.git"
+  },
+  "keywords": [
+    "array",
+    "array",
+    "functions",
+    "array",
+    "utilities",
+    "array",
+    "driver",
+    "array",
+    "helpers",
+    "helper",
+    "functions"
+  ],
+  "author": "JunaidOfficialNow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junaidofficialnow/array-driver/issues"
+  },
+  "homepage": "https://github.com/junaidofficialnow/array-driver#readme"
+}
