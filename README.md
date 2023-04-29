@@ -40,7 +40,7 @@ console.log(result); // Output: true
 
 ```
 
-## if your value is an object or array pass a callback with search criteria
+### if your value is an object or array pass a callback with search criteria
 ```js
 const { findOneAndUpdate } = require('array-driver');
 
