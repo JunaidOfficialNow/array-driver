@@ -1,1 +1,0 @@
-export declare function findOneAndUpdate(array: Array<any>, target: any, value: any): boolean

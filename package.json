@@ -3,8 +3,8 @@
   "version": "1.1.4",
   "description": "'useful custom array methods'",
   "type": "commonjs",
-  "main": "index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/types",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"

@@ -1,0 +1,8 @@
+*.ts
+!dist
+!dist/**
+src/
+node_modules/
+.gitignore
+tsconfig.json
+package
