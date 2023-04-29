@@ -1,4 +1,4 @@
-### array-driver
+# array-driver
 A simple utility package for manipulating arrays.
 
 ### Installation
