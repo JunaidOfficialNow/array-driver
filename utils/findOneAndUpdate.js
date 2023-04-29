@@ -1,4 +1,4 @@
-module.findOneAndUpdate = function(array, searchValue, updateValue) {
+exports.findOneAndUpdate = function(array, searchValue, updateValue) {
   const index = array.findIndex(value => value === searchValue);
 
   if (index === -1) {
