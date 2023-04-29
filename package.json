@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "description": "'useful custom array methods'",
   "type": "commonjs",
-  "main": "dist/index.js",
+  "main": "index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
