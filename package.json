@@ -3,9 +3,11 @@
   "version": "1.0.2",
   "description": "'useful custom array methods'",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dis/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/junaidofficialnow/array-driver/issues"
   },
-  "homepage": "https://github.com/junaidofficialnow/array-driver#readme"
+  "homepage": "https://github.com/junaidofficialnow/array-driver#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
 }
