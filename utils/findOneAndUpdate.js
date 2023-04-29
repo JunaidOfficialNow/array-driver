@@ -1,4 +1,4 @@
-exports.findOneAndUpdate = function(array, searchValue, updateValue) {
+exports.findOneAndUpdate = function(searchValue, updateValue, array) {
   if (array ==  undefined) {
     array = this;
   }
