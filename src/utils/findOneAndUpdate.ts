@@ -1,4 +1,4 @@
-export function findOneAndUpdate(this: any, searchValue: any, updateValue: any): boolean {
+export function findOneAndUpdate(this: Array<any>, searchValue: any, updateValue: any): boolean {
   let index: number;
   if (typeof searchValue === 'function') {
     index = this.findIndex(searchValue);
