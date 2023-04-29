@@ -1,7 +1,7 @@
 ### array-driver
 A simple utility package for manipulating arrays.
 
-###Installation
+### Installation
 You can install array-driver using NPM:
 
 ```shell

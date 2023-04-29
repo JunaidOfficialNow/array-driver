@@ -15,16 +15,11 @@
   },
   "keywords": [
     "array",
-    "array",
-    "functions",
-    "array",
-    "utilities",
-    "array",
-    "driver",
-    "array",
-    "helpers",
-    "helper",
-    "functions"
+    "array-functions",
+    "array-utilities",
+    "array-driver",
+    "array-helpers",
+    "array-functions"
   ],
   "author": "JunaidOfficialNow",
   "license": "ISC",
