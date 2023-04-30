@@ -1,4 +1,4 @@
-import { searchCriteria } from "./updateObjectInArray";
+import { searchCriteria } from "../updateMethods/updateObjectInArray";
 
 export function deleteOneWhere(this: Array<any>, searchCriteria: searchCriteria): any {
   const index = this.findIndex(searchCriteria);

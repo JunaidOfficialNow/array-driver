@@ -1,4 +1,4 @@
-import { searchCriteria } from "./updateObjectInArray";
+import { searchCriteria } from "../updateMethods/updateObjectInArray";
 
 export function deleteAllWhere(this: any[], searchCriteria: searchCriteria): any[] {
   const index = this.findIndex(searchCriteria);

@@ -1,9 +1,6 @@
-import { deleteAllByValue } from './utils/deleteAllByValue';
-import { deleteAllWhere } from './utils/deleteAllWhere';
-import { deleteOneByValue } from './utils/deleteOneByValue';
-import { deleteOneWhere } from './utils/deleteOneWhere';
-import {findOneAndUpdate} from './utils/findOneAndUpdate';
-import { searchCriteria, updateCriteria, updateObjectInArray } from './utils/updateObjectInArray';
+import { deleteAllByValue, deleteAllWhere, deleteOneByValue, deleteOneWhere } from './utils/deleteMethods';
+import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
+import { searchCriteria, updateCriteria } from './types/criteriaTypes';
 
 
 declare global {
