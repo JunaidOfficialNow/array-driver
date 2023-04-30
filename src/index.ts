@@ -2,7 +2,7 @@ import { deleteAllByValue, deleteAllWhere, deleteOneByValue, deleteOneWhere } fr
 import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
 import { filterNullish, distinct } from './utils/filterMethods';
 import { isEmpty , isUnique, allElementsOfType} from './utils/validateMethods';
-import { groupBy, countBy, countValues, intersect, union } from './utils/aggregateMethods.ts';
+import { groupBy, countBy, countValues, intersect, union, difference } from './utils/aggregateMethods.ts';
 import { sample } from './utils/selectionMethods';
 
 
@@ -29,6 +29,7 @@ declare global {
     union(arr: T[]): T[];
     intersect(arr: T[]): T[];
     sample(): T | undefined;
+    difference(...arr: Array<T[]>): T[]
   }
 
 }
@@ -51,6 +52,7 @@ export function config(): void {
   Array.prototype.union = union;
   Array.prototype.intersect = intersect;
   Array.prototype.sample = sample;
+  Array.prototype.difference = difference;
 }
 
 

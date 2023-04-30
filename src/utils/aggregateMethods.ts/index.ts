@@ -3,6 +3,7 @@ import { groupBy } from "./groupBy";
 import { countValues } from "./countValues";
 import { intersect} from "./intersect";
 import { union } from "./union";
+import { difference } from "./difference";
 
 export {
   groupBy,
@@ -10,4 +11,5 @@ export {
   countValues,
   intersect,
   union,
+  difference,
 }
