@@ -1,6 +1,6 @@
 {
   "name": "array-driver",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "'useful custom array methods'",
   "type": "commonjs",
   "main": "dist/index.js",
