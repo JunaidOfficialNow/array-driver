@@ -2,10 +2,11 @@ import { deleteAllByValue, deleteAllWhere, deleteOneByValue, deleteOneWhere } fr
 import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
 import { filterNullish, distinct } from './utils/filterMethods';
 import { isEmpty , isUnique, allElementsOfType} from './utils/validateMethods';
-import { groupBy, countBy } from './utils/aggregateMethods.ts';
+import { groupBy, countBy, countValues } from './utils/aggregateMethods.ts';
 
 
 import { searchCriteria, updateCriteria } from './types/criteriaTypes';
+import { Primitive } from './types/PrimitiveTypes';
 
 
 declare global {
@@ -23,6 +24,7 @@ declare global {
     groupBy(...keys: T[]): Record<string, T[]>;
     allElementsOfType(dataType: any): boolean;
     countBy(...keys: T[]): Record<string, number>
+    countValues(...keys: Primitive[]): Record<string, number>
   }
 
 }
@@ -40,6 +42,8 @@ export function config(): void {
   Array.prototype.isUnique = isUnique;
   Array.prototype.groupBy = groupBy;
   Array.prototype.allElementsOfType = allElementsOfType;
+  Array.prototype.countBy = countBy;
+  Array.prototype.countValues = countValues;
 }
 
 
