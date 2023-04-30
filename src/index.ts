@@ -1,6 +1,7 @@
 import { deleteAllByValue, deleteAllWhere, deleteOneByValue, deleteOneWhere } from './utils/deleteMethods';
 import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
 import { filterNullish, distinct } from './utils/filterMethods';
+import { isEmpty } from './utils/validateMethods';
 import { searchCriteria, updateCriteria } from './types/criteriaTypes';
 
 
@@ -14,6 +15,7 @@ declare global {
     deleteAllWhere(searchCriteria: searchCriteria): any[]
     filterNullish(): T[]
     distinct(): T[]
+    isEmpty(): boolean
   }
 
 }
@@ -27,6 +29,7 @@ export function config(): void {
   Array.prototype.deleteAllWhere = deleteAllWhere;
   Array.prototype.filterNullish = filterNullish;
   Array.prototype.distinct = distinct;
+  Array.prototype.isEmpty = isEmpty;
 }
 
 
