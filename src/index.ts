@@ -1,7 +1,10 @@
 import { deleteAllByValue, deleteAllWhere, deleteOneByValue, deleteOneWhere } from './utils/deleteMethods';
 import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
 import { filterNullish, distinct } from './utils/filterMethods';
-import { isEmpty } from './utils/validateMethods';
+import { isEmpty , isUnique, allElementsOfType} from './utils/validateMethods';
+import { groupBy, countBy } from './utils/aggregateMethods.ts';
+
+
 import { searchCriteria, updateCriteria } from './types/criteriaTypes';
 
 
@@ -16,6 +19,10 @@ declare global {
     filterNullish(): T[]
     distinct(): T[]
     isEmpty(): boolean
+    isUnique(): boolean
+    groupBy(...keys: T[]): Record<string, T[]>;
+    allElementsOfType(dataType: any): boolean;
+    countBy(...keys: T[]): Record<string, number>
   }
 
 }
@@ -30,6 +37,9 @@ export function config(): void {
   Array.prototype.filterNullish = filterNullish;
   Array.prototype.distinct = distinct;
   Array.prototype.isEmpty = isEmpty;
+  Array.prototype.isUnique = isUnique;
+  Array.prototype.groupBy = groupBy;
+  Array.prototype.allElementsOfType = allElementsOfType;
 }
 
 
