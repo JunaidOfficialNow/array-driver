@@ -2,7 +2,7 @@ import { deleteAllByValue, deleteAllWhere, deleteOneByValue, deleteOneWhere } fr
 import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
 import { filterNullish, distinct } from './utils/filterMethods';
 import { isEmpty , isUnique, allElementsOfType} from './utils/validateMethods';
-import { groupBy, countBy, countValues } from './utils/aggregateMethods.ts';
+import { groupBy, countBy, countValues, intersect, union } from './utils/aggregateMethods.ts';
 
 
 import { searchCriteria, updateCriteria } from './types/criteriaTypes';
@@ -23,8 +23,10 @@ declare global {
     isUnique(): boolean
     groupBy(...keys: T[]): Record<string, T[]>;
     allElementsOfType(dataType: any): boolean;
-    countBy(...keys: T[]): Record<string, number>
-    countValues(...keys: Primitive[]): Record<string, number>
+    countBy(...keys: T[]): Record<string, number>;
+    countValues(...keys: Primitive[]): Record<string, number>;
+    union(arr: T[]): T[];
+    intersect(arr: T[]): T[];
   }
 
 }
@@ -44,6 +46,8 @@ export function config(): void {
   Array.prototype.allElementsOfType = allElementsOfType;
   Array.prototype.countBy = countBy;
   Array.prototype.countValues = countValues;
+  Array.prototype.union = union;
+  Array.prototype.intersect = intersect;
 }
 
 
