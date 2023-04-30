@@ -3,6 +3,7 @@ import {findOneAndUpdate, updateObjectInArray} from './utils/updateMethods';
 import { filterNullish, distinct } from './utils/filterMethods';
 import { isEmpty , isUnique, allElementsOfType} from './utils/validateMethods';
 import { groupBy, countBy, countValues, intersect, union } from './utils/aggregateMethods.ts';
+import { sample } from './utils/selectionMethods';
 
 
 import { searchCriteria, updateCriteria } from './types/criteriaTypes';
@@ -27,6 +28,7 @@ declare global {
     countValues(...keys: Primitive[]): Record<string, number>;
     union(arr: T[]): T[];
     intersect(arr: T[]): T[];
+    sample(): T | undefined;
   }
 
 }
@@ -48,6 +50,7 @@ export function config(): void {
   Array.prototype.countValues = countValues;
   Array.prototype.union = union;
   Array.prototype.intersect = intersect;
+  Array.prototype.sample = sample;
 }
 
 
