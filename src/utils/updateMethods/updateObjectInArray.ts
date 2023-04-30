@@ -1,3 +1,6 @@
+/**
+ * This function will update a object from a array of objects
+ */
 import { searchCriteria, updateCriteria } from "../../types/criteriaTypes";
 export function updateObjectInArray(this: Array<any>, searchCriteria: searchCriteria, updateCriteria: updateCriteria | any): boolean {
 

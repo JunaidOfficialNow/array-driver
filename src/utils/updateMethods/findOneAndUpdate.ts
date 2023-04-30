@@ -1,3 +1,9 @@
+/** 
+ * This function will be find and update the a value
+ * @param searchValue 
+ * @param updateValue 
+ * @returns boolean
+ */
 export function findOneAndUpdate(this: Array<any>, searchValue: any, updateValue: any): boolean {
   let index: number;
   if (typeof searchValue === 'function') {
