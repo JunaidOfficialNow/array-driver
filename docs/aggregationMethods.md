@@ -38,6 +38,7 @@ console.log(result);
 ### Notes
  - This function is made for arrays which contains non-primitive elements like objects.
 
+<hr>
 
 
 ## `countValues` Function
