@@ -68,3 +68,30 @@ const result2 = arr.countValues(1, 2);
 ### Notes
 - This function is made for arrays which contains primitive values.
 
+
+
+<hr>
+
+
+## `difference` Function
+
+Returns an array containing all elements from the first array that are not present in any of the other arrays.
+
+
+### Parameters
+
+- `comma seperated arrays` (required):- Arrays to find the difference with.
+
+### Returns
+
+- The difference between the first array and the other arrays.
+
+### Examples
+
+```javascript
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3, 4, 5, 6, 7];
+const arr3 = [5, 6, 7, 8, 9];
+
+const result = arr1.difference(arr2, arr3); // [1, 2]
+```
