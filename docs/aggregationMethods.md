@@ -125,18 +125,14 @@ const data = [
 const example1 = data.groupBy('city');
 // Output:
 // {
-//   "New York": {
-//     "25": [
+//   "New York": [
 //       { name: "Alice", city: "New York", age: 25 },
 //       { name: "Bob", city: "New York", age: 30 }
-//     ],
-//   },
-//   "San Francisco": {
-//     "25": [
+//   ],
+//   "San Francisco": [
 //       { name: "Charlie", city: "San Francisco", age: 25 },
 //       { name: "Dave", city: "San Francisco", age: 30 }
-//     ],
-//   }
+//   ]
 // }
 
 const example2 = data.groupBy("city", "age");
