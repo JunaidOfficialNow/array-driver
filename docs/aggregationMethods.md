@@ -70,7 +70,7 @@ const result2 = arr.countValues(1, 2);
 
 
 
-<hr>
+ <hr>
 
 
 ## `difference` Function
@@ -94,4 +94,71 @@ const arr2 = [3, 4, 5, 6, 7];
 const arr3 = [5, 6, 7, 8, 9];
 
 const result = arr1.difference(arr2, arr3); // [1, 2]
+```
+
+ <hr>
+
+
+## `groupBY` Function
+
+Groups array of objects by one or more keys
+
+
+### Parameters
+
+- `comma seperated keys` (required):- One or more keys to group by
+
+### Returns
+
+- Object with grouped keys as properties and grouped values as array
+
+### Examples
+
+```javascript
+
+const data = [
+  { name: "Alice", city: "New York", age: 25 },
+  { name: "Bob", city: "New York", age: 30 },
+  { name: "Charlie", city: "San Francisco", age: 25 },
+  { name: "Dave", city: "San Francisco", age: 30 },
+];
+const example1 = data.groupBy('city');
+// Output:
+// {
+//   "New York": {
+//     "25": [
+//       { name: "Alice", city: "New York", age: 25 },
+//       { name: "Bob", city: "New York", age: 30 }
+//     ],
+//   },
+//   "San Francisco": {
+//     "25": [
+//       { name: "Charlie", city: "San Francisco", age: 25 },
+//       { name: "Dave", city: "San Francisco", age: 30 }
+//     ],
+//   }
+// }
+
+const example2 = data.groupBy("city", "age");
+// Output:
+// {
+//   "New York": {
+//     "25": [
+//       { name: "Alice", city: "New York", age: 25 }
+//     ],
+//     "30": [
+//       { name: "Bob", city: "New York", age: 30 }
+//     ]
+//   },
+//   "San Francisco": {
+//     "25": [
+//       { name: "Charlie", city: "San Francisco", age: 25 }
+//     ],
+//     "30": [
+//       { name: "Dave", city: "San Francisco", age: 30 }
+//     ]
+//   }
+// }
+
+
 ```
