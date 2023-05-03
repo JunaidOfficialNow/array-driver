@@ -101,16 +101,16 @@ const result = arr1.difference(arr2, arr3); // [1, 2]
 
 ## `groupBY` Function
 
-Groups array of objects by one or more keys
+Groups array of objects by the given key.
 
 
 ### Parameters
 
-- `comma seperated keys` (required):- One or more keys to group by
+- key (required):- key of the object to group by
 
 ### Returns
 
-- Object with grouped keys as properties and grouped values as array
+- Object with grouped key's values as properties and grouped values as arrays
 
 ### Examples
 
@@ -135,26 +135,9 @@ const example1 = data.groupBy('city');
 //   ]
 // }
 
-const example2 = data.groupBy("city", "age");
-// Output:
-// {
-//   "New York": {
-//     "25": [
-//       { name: "Alice", city: "New York", age: 25 }
-//     ],
-//     "30": [
-//       { name: "Bob", city: "New York", age: 30 }
-//     ]
-//   },
-//   "San Francisco": {
-//     "25": [
-//       { name: "Charlie", city: "San Francisco", age: 25 }
-//     ],
-//     "30": [
-//       { name: "Dave", city: "San Francisco", age: 30 }
-//     ]
-//   }
-// }
-
 
 ```
+
+### notes
+- This function is supposed to work only with array of objects. Else expect for unexpected behaviour.
+- Currently only one key is supported. It will be updated to take multiple arguments and to group by multiple values.
