@@ -141,3 +141,36 @@ const example1 = data.groupBy('city');
 ### notes
 - This function is supposed to work only with array of objects. Else expect for unexpected behaviour.
 - Currently only one key is supported. It will be updated to take multiple arguments and to group by multiple values.
+
+
+ <hr>
+
+
+## `intersect` Function
+
+Returns the intersection of two arrays, i.e., an array of elements that are present in both arrays.
+
+
+### Parameters
+
+- array (required):- The array to intersect with
+
+### Returns
+
+- An array containing the intersection of the two arrays.
+
+### Examples
+
+```javascript
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3, 4, 5, 6, 7];
+
+const intersectArr = arr1.intersect(arr2); // [3, 4, 5]
+
+
+```
+
+### notes
+- This function is supposed to work only with array of objects. Else expect for unexpected behaviour.
+- Currently only one key is supported. It will be updated to take multiple arguments and to group by multiple values.
