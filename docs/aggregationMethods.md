@@ -170,7 +170,5 @@ const intersectArr = arr1.intersect(arr2); // [3, 4, 5]
 
 
 ```
-
 ### notes
-- This function is supposed to work only with array of objects. Else expect for unexpected behaviour.
-- Currently only one key is supported. It will be updated to take multiple arguments and to group by multiple values.
+- This function is also compatible with arrays which contain non-primitive values.
