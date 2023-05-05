@@ -1,4 +1,12 @@
 
+# Aggregation methods
+
+ - [countBy](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#countby-function)
+ - [countValues](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#countValues-function)
+ - [difference](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#difference-function)
+ - [groupBy](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#groupBy-function)
+ - [intersect](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#intersect-function)
+ - [union](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#union-function)
 ##  `countBy` Function
 
 The `countBy` function takes an array of objects and returns an object where each key represents a value of the input array and the corresponding value represents the count of that value in the array. This function only works with non-primitive types.
@@ -99,7 +107,7 @@ const result = arr1.difference(arr2, arr3); // [1, 2]
  <hr>
 
 
-## `groupBY` Function
+## `groupBy` Function
 
 Groups array of objects by the given key.
 
@@ -193,11 +201,15 @@ Returns the union of two arrays, i.e., an array of all elements from both arrays
 
 ```javascript
 
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [3, 4, 5, 6, 7];
+const arr1 = [{ id: 1, name: "Alice" }, { id: 2, name: "Bob" }, { id: 3, name: "Charlie" }];
+const arr2 = [{ id: 2, name: "Bob" }, { id: 3, name: "Charlie" }, { id: 4, name: "David" }];
 
-const intersectArr = arr1.intersect(arr2); // [3, 4, 5]
+// Call the function
+const result = arr1.union(arr2);
 
+// Output the result
+console.log(result);
+// [{ id: 1, name: "Alice" },{ id: 2, name: "Bob" },{ id: 3, name: "Charlie" },{ id: 4, name: "David" }]
 
 ```
 ### notes
