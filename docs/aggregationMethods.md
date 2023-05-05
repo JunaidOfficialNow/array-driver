@@ -172,3 +172,33 @@ const intersectArr = arr1.intersect(arr2); // [3, 4, 5]
 ```
 ### notes
 - This function is also compatible with arrays which contain non-primitive values.
+
+ <hr>
+
+
+## `union` Function
+
+Returns the union of two arrays, i.e., an array of all elements from both arrays with duplicates removed.
+
+
+### Parameters
+
+- array (required):- The array to union with
+
+### Returns
+
+- An array containing the union of the two arrays.
+
+### Examples
+
+```javascript
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3, 4, 5, 6, 7];
+
+const intersectArr = arr1.intersect(arr2); // [3, 4, 5]
+
+
+```
+### notes
+- This function is also compatible with arrays which contain non-primitive values.
