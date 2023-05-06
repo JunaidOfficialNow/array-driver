@@ -1,6 +1,8 @@
 
 # Aggregation methods
 
+  <p>Aggregation methods are functions that operate on an array of values and return a single value that represents some kind of summary or aggregation of the original data.</p>
+
  - [countBy](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#countby-function)
  - [countValues](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#countValues-function)
  - [difference](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md#difference-function)

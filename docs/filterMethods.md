@@ -1,5 +1,12 @@
 # Filter methods
 
+<p>Filter methods are methods that operate on an array of values and return a new array that contains only the values that meet certain criteria. </p>
+
+  
+
+ -[distinct](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#distinct-function)
+ -[filterNullish](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#filterNullish-function)
+
 <hr>
 
 
