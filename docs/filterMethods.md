@@ -27,3 +27,30 @@ const uniqueObjects = objects.distinct(); // [{ id: 1, name: "John" }, { id: 2, 
 
 
 ```
+
+<hr>
+
+
+## `filterNullish` Function
+
+ - Removes all the null and undefined values from the original array.
+
+
+### Returns
+ 
+- The original array with no null or undefined values.
+
+
+### Examples
+
+```javascript
+
+// Example usage
+const values = [1, null, 2, undefined, 3, null, 4];
+const nonNullishValues = values.filterNullish(); // [1, 2, 3, 4]
+
+const names = ["John", null, "Jane", undefined, "Bob", null, "Alice"];
+const nonNullishNames = names.filterNullish(); // ["John", "Jane", "Bob", "Alice"]
+
+
+```
