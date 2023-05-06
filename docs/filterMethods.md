@@ -4,8 +4,8 @@
 
   
 
- -[distinct](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#distinct-function)
- -[filterNullish](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#filterNullish-function)
+ - [distinct](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#distinct-function)
+ - [filterNullish](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#filterNullish-function)
 
 <hr>
 
