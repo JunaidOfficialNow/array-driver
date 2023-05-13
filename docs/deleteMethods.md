@@ -142,7 +142,7 @@ console.log(arr);
 ```
 
 ### notes 
- - Recommended using [`deleteOneWhere`] (https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteOneWhere-function) if you want to delete a object or array from an array.
+ - Recommended using [`deleteOneWhere`](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteOneWhere-function) if you want to delete a object or array from an array.
 
 <hr>
 
