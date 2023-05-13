@@ -35,3 +35,29 @@ const result3 = arr3.allElementOfType('string');
 ## notes 
 
 - Since javascript considers the type of array to be 'object' it will be considered as an object type.
+
+<hr>
+
+##  `isEmpty` Function
+
+Returns true if array is empty
+
+### Returns
+
+- boolean: true if array has no elements
+
+### Example
+
+```javascript
+
+
+const  arr = [3,5,2,3,4,2];
+
+const arrayIsEmpty = arr.isEmpty();
+// false
+
+```
+
+<hr>
+
+
