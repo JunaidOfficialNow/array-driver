@@ -60,4 +60,37 @@ const arrayIsEmpty = arr.isEmpty();
 
 <hr>
 
+##  `isUnique` Function
+
+Returns true if all the array elements are  unique
+
+### Returns
+
+- boolean: true if array has no duplicate elements
+
+### Example
+
+```javascript
+
+
+const  arr = [3,5,2,3,4,2];
+
+const arrayIsUnique = arr.isUnique();
+// false
+
+const arr2 = [
+  { name: "John", age: 30 },
+  { name: "Jane", age: 25 },
+  { name: "John", age: 25 },
+  { name: "Jane", age: 30 },
+  { name: "John", age: 30 },
+];
+
+const isObjectArrayUnique = arr2.isUnique()
+// false
+
+```
+
+<hr>
+
 
