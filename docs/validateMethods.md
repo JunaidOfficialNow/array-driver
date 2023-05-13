@@ -1,3 +1,11 @@
+# Validation methods
+
+  <p>Validation methods validate the array with certain criteria</p>
+
+ - [allElementOfType](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/validateMethods.md#allElementOfType-function)
+ - [isEmpty](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/validateMethods.md#isEmpty-function)
+ - [isUnique](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/validateMethods.md#isUnique-function)
+
 ##  `allElementOfType` Function
 
 Returns true if all elements are of given type
