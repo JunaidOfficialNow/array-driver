@@ -1,3 +1,13 @@
+
+# Deletion methods
+
+  <p>Deletion methods will delete the elements from the array based on the given criteria</p>
+
+ - [deleteAllByValue](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteAllByValue-function)
+ - [deleteAllWhere](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteAllWhere-function)
+ - [deleteOneByValue](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteOneByValue-function)
+ - [deleteOneWhere](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteOneWhere-function)
+
 ##  `deleteAllByValue` Function
 
  - deletes all matching values from an array and returns an array of the deleted values.
