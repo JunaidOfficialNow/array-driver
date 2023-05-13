@@ -99,6 +99,10 @@ const isObjectArrayUnique = arr2.isUnique()
 
 ```
 
+## notes 
+
+- use  [`distinct`](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md#distinct-function) method to remove duplicate elements from the array.
+
 <hr>
 
 
