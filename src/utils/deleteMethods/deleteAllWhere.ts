@@ -13,4 +13,4 @@ export function deleteAllWhere(this: any[], searchCriteria: searchCriteria): any
   }
   const deleted = this.splice(index, 1);
   return deleted.concat(deleteAllWhere.call(this, searchCriteria))
-  }
+}
