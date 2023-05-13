@@ -85,3 +85,49 @@ console.log(arr);
 
 
 <hr>
+
+##  `deleteOneByValue` Function
+
+ - deletes the first matching value from the array
+
+
+### parameters
+
+- value - The value to be deleted from the array.
+
+### Returns
+
+- the deleted value or undefined if the value is not found
+
+### Example 1
+
+```javascript
+const arr = [
+  { name: "Charlie", age: 35 },
+  { name: "David", age: 40 },
+  { name: "Eve", age: 45 },
+  { name: "Charlie", age: 35 }
+];
+
+arr.deleteOneByValue({ name: "Charlie", age: 35 });
+console.log(arr);
+//  [
+//   { name: "David", age: 40 },
+//   { name: "Eve", age: 45 },
+//   { name: "Charlie", age: 35 }
+// ];
+
+```
+
+### Example 2
+
+```javascript
+const arr = ['1',3,4,3,4,3,1];
+
+arr.deleteOneByValue(3);
+console.log(arr);
+// ['1',4,3,4,3,1];
+```
+
+
+<hr>

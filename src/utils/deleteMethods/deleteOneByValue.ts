@@ -4,7 +4,13 @@
  * @returns the deleted value or undefined if the value is not found
  */
 export function deleteOneByValue(this: Array<any>, target: any): any {
-  let index = this.indexOf(target);
+  let index: number;
+  if (typeof target === 'object') {
+    const tempArray = this.map(el => JSON.stringify(el));
+    index = tempArray.indexOf(JSON.stringify(target));
+  } else {
+    index = this.indexOf(target);
+  }
   if (index == -1) {
     return ;
   }
