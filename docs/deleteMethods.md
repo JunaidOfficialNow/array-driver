@@ -131,3 +131,50 @@ console.log(arr);
 
 
 <hr>
+
+
+
+##  `deleteOneWhere` Function
+
+ - deletes the first element that meet a certain search criteria specified by a callback function.
+
+### parameters
+
+- `callback` function: A function that returns true for the element you want to delete. The callback function takes one parameter which represents each element in the array.
+
+### Returns
+
+- The deleted element or undefined if no element was deleted
+
+### Example 1
+
+```javascript
+const arr = [
+  { name: "Charlie", age: 35 },
+  { name: "David", age: 40 },
+  { name: "Eve", age: 45 },
+  { name: "Charlie", age: 35 }
+];
+
+arr.deleteOneWhere(obj  => obj.name === 'Charlie');
+console.log(arr);
+//  [
+//   { name: "David", age: 40 },
+//   { name: "Eve", age: 45 },
+//   { name: "Charlie", age: 35 }
+// ];
+
+```
+
+### Example 2
+
+```javascript
+const arr = ['1',3,4,3,4,3,1];
+
+arr.deleteOneWhere(num => num === 3);
+console.log(arr);
+// ['1',4,3,4,3,1];
+```
+
+
+<hr>
