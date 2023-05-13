@@ -48,6 +48,8 @@ console.log(arr);
 
  -  This function will find for the exact element that matches the given target. If you want to delete by a condition refer [`deleteAllWhere`](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteAllWhere-function) function.
 
+ - Recommended using the [`deleteAllWhere`](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteAllWhere-function) function to work with arrays containing non-primitive values like objects and arrays.
+
 
 <hr>
 
@@ -139,6 +141,8 @@ console.log(arr);
 // ['1',4,3,4,3,1];
 ```
 
+### notes 
+ - Recommended using [`deleteOneWhere`] (https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md#deleteOneWhere-function) if you want to delete a object or array from an array.
 
 <hr>
 
