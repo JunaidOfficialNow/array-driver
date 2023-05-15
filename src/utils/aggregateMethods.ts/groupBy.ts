@@ -9,7 +9,7 @@ interface MyObject {
   [key: string]: any;
 }
 
-function groupBy<T extends MyObject>(this: T[], key: string ): Record<string, T[]> {
+export function groupBy<T extends MyObject>(this: T[], key: string ): Record<string, T[]> {
   if (key === undefined) {
     return {}
   }
