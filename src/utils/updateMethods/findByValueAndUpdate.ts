@@ -12,10 +12,12 @@ export function findByValueAndUpdate<T>(this: T[], target: T, updateCriteria: Fu
   if (typeof target === 'object') {
     const tempArray = this.map(el => JSON.stringify(el));
     index = tempArray.indexOf(JSON.stringify(target));
+    if (index == -1) return;
+    updateCriteria(this[index])
   } else {
     index = this.indexOf(target);
+    if (index == -1) return;
+    this[index] = updateCriteria(this[index])
   }
-  if (index == -1) return;
-  this[index] = updateCriteria(this[index])
   return this[index];
 }
