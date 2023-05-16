@@ -11,7 +11,8 @@ export function updateMany<T>(this: T[], searchCriteria: searchCriteria, updateC
   const udpatedElements = [];
   for (let i = 0; i < this.length; i++) {
     if (searchCriteria(this[i])) {
-      updateCriteria(this[i])
+      if (typeof this[i] === 'object') updateCriteria(this[i])
+      else this[i] = updateCriteria(this[i])
       udpatedElements.push(this[i]);
     }
   }
