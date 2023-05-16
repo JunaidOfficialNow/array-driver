@@ -10,6 +10,7 @@ type searchCriteria = (value: any, index: number, obj: any[]) => unknown
 export function updateOne<T>(this: T[], searchCriteria: searchCriteria, updateCriteria: Function): T | undefined {
   let index = this.findIndex(searchCriteria);
   if (index == -1) return;
-  this[index] = updateCriteria(this[index])
+  if (typeof this[index] === 'object') updateCriteria(this[index]);
+  else this[index] = updateCriteria(this[index])
   return this[index];
 }
