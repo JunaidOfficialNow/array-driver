@@ -117,3 +117,61 @@ console.log(updatedElements)
 
 
 <hr>
+
+
+##  `replaceOne` Function
+
+This function will find and replace an element from the array.
+
+## Parameters
+
+- `searchCriteria`: The callback function that will return true for the element to be updated. It takes one necessary arguments and 2 optional arguments.`value` (the current element in the array),  optional: `index` (the index of the current element), and `obj` (the array itself).
+- `replaceValue` : value to be replaced with.
+
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If any element was replaced, the function return the replaced index value.
+
+## Example
+
+```javascript
+
+// Example usage
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
+];
+
+// Define the search criteria callback function
+const searchCriteria = (value) => value.grade === 'B';
+
+// Call the updateMany function
+const updatedStudents = students.replaceOne(searchCriteria, {replaced: true});
+console.log(updatedStudents); // 1
+
+console.log(students);
+// [
+//   { id: 1, name: 'Alice', grade: 'A' },
+//   {replaced: true},
+//   { id: 3, name: 'Charlie', grade: 'C' },
+//   { id: 4, name: 'David', grade: 'B' },
+//   { id: 5, name: 'Eve', grade: 'A' },
+// ];
+
+
+```
+
+```javascript 
+const numbers = [3,2,4,2,5,3,1,2];
+
+const updatedElements = numbers.replaceOne(el => el > 2, 10);
+console.log(updatedElements)
+// 0
+```
+
+<hr>
+
