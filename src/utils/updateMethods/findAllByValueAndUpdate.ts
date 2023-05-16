@@ -9,16 +9,21 @@ type searchCriteria = (value: any) => unknown
 
 export function findAllByValueAndUpdate<T>(this: T[], target: T, updateCriteria: Function): T[] | undefined {
   const udpatedElements = [];
+  let tempTarget = target;
   let searchArray: Array<T | string>
   if (typeof target === 'object' ) {
-    target = (JSON.stringify(target) as T);
+    tempTarget = (JSON.stringify(target) as T);
     searchArray  = this.map(el => JSON.stringify(el));
   } else {
     searchArray = this;
   }
   for (let i = 0; i < this.length; i++) {
-    if (target === searchArray[i]) {
-      updateCriteria(this[i])
+    if (tempTarget === searchArray[i]) {
+      if (typeof target === 'object') {
+        updateCriteria(this[i]);
+      } else {
+        this[i] = updateCriteria(this[i])
+      }
       udpatedElements.push(this[i]);
     }
   }
