@@ -1,39 +1,112 @@
-##  `findOneAndUpdate` Function
+##  `updateOne` Function
 
-Returns true if all elements are of given type
+This function will find and update an element from the array.
 
-### Returns
+## Parameters
 
-- boolean: true if all elements are of given type
+- `searchCriteria`: The callback function that will return true for the element to be updated. It takes one necessary arguments and 2 optional arguments.`value` (the current element in the array),  optional: `index` (the index of the current element), and `obj` (the array itself).
+- `updateCriteria`: The callback function that will update the element. It takes one argument: the element to be updated.
 
-### Example
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If an element was found and updated, it returns the updated element.
+
+## Example
 
 ```javascript
-const arr = [
-  { name: "John", age: 30 },
-  { name: "Jane", age: 25 },
-  { name: "John", age: 25 },
-  { name: "Jane", age: 30 },
-  { name: "John", age: 30 },
+// Example usage
+const array = [1, 2, 3, 4, 5];
+
+const searchCriteria = (value) => value === 3;
+const updateCriteria = (element) => element * 2;
+
+const updatedElement = array.updateOne(searchCriteria, updateCriteria);
+console.log(updatedElement); // Output: 6
+```
+
+```javascript
+// Example usage
+const users = [
+  { id: 1, name: 'Alice', age: 25 },
+  { id: 2, name: 'Bob', age: 30 },
+  { id: 3, name: 'Charlie', age: 35 },
 ];
 
-const result = arr.allElementOfType('object') 
-// true
+// Define the search criteria callback function
+const searchCriteria = (value) => value.id === 2;
 
-const  arr2 = [3,5,2,3,4,2];
+// Define the update criteria callback function
+const updateCriteria = (obj) => {
+    obj.age = 31 // Update the age property of the object
+};
 
-const result2 = arr2.allElementOfType('number');
-// true
-
-const arr3 = ['hello', 'array', 'driver', 4];
-
-const result3 = arr3.allElementOfType('string');
-// false
+// Call the updateOne function
+const updatedUser = users.updateOne(searchCriteria, updateCriteria);
+console.log(updatedUser); // Output: { id: 2, name: 'Bob', age: 31 }
 
 ```
 
 ## notes 
+- If the array element is of type object then you just have to make the updates no need to return anything.
+- If the array element is of type primitive then you have to return the updated value.
 
-- Since javascript considers the type of array to be 'object' it will be considered as an object type.
+
+<hr>
+
+
+##  `updateMany` Function
+
+This function will find and update all elements that matches the searh criteria from the array.
+
+## Parameters
+
+- `searchCriteria`: The callback function that will return true for the element to be updated. It takes one necessary arguments and 2 optional arguments.`value` (the current element in the array),  optional: `index` (the index of the current element), and `obj` (the array itself).
+- `updateCriteria`: The callback function that will update the element. It takes one argument: the element to be updated.
+
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If any elements were updated, the function return the updated elements.
+
+## Example
+
+```javascript
+// Example usage
+const array = [1, 2, 3, 4, 5];
+
+const searchCriteria = (value) => value === 3;
+const updateCriteria = (element) => element * 2;
+
+const updatedElement = array.updateOne(searchCriteria, updateCriteria);
+console.log(updatedElement); // Output: 6
+```
+
+```javascript
+// Example usage
+const users = [
+  { id: 1, name: 'Alice', age: 25 },
+  { id: 2, name: 'Bob', age: 30 },
+  { id: 3, name: 'Charlie', age: 35 },
+];
+
+// Define the search criteria callback function
+const searchCriteria = (value) => value.id === 2;
+
+// Define the update criteria callback function
+const updateCriteria = (obj) => {
+    obj.age = 31 // Update the age property of the object
+};
+
+// Call the updateOne function
+const updatedUser = users.updateOne(searchCriteria, updateCriteria);
+console.log(updatedUser); // Output: { id: 2, name: 'Bob', age: 31 }
+
+```
+
+## notes 
+- If the array element is of type object then you just have to make the updates no need to return anything.
+- If the array element is of type primitive then you have to return the updated value.
+
 
 <hr>
