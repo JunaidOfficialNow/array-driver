@@ -168,8 +168,8 @@ console.log(students);
 ```javascript 
 const numbers = [3,2,4,2,5,3,1,2];
 
-const updatedElements = numbers.replaceOne(el => el > 2, 10);
-console.log(updatedElements)
+const updatedElement = numbers.replaceOne(el => el > 2, 10);
+console.log(updatedElement)
 // 0
 ```
 
@@ -231,3 +231,214 @@ console.log(updatedElements)
 ```
 
 <hr>
+
+##  `findByValueAndUpdate` Function
+
+This function will find and update the value that matches the provided value.
+
+## Parameters
+
+- `target`: The target value to be updated.
+-  `updateCriteria`: the callback function that updates the value.
+
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If any elements were updated, the function will return the updated value.
+
+## Example
+
+```javascript
+
+// Example usage
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
+];
+
+// Define the search criteria callback function
+const searchCriteria = (value) => value.grade === 'B';
+
+// Call the updateMany function
+const updatedStudent = students.findByValueAndUpdate({ id: 2, name: 'Bob', grade: 'B' }, student => student.grade = 'A+');
+console.log(updatedStudent); // { id: 2, name: 'Bob', grade: 'A+' }
+
+
+```
+
+```javascript 
+const numbers = [3,2,4,2,5,3,1,2];
+
+const updatedElement = numbers.findByValueAndUpdate(2, num => num * 2);
+console.log(updatedElement)
+// 4
+```
+
+<hr>
+
+
+##  `findAllByValueAndUpdate` Function
+
+This function will find and update all the elements that matches the value.
+
+## Parameters
+
+- `target`: The target value to be updated.
+-  `updateCriteria`: the callback function that updates the value.
+
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If any elements were updated, the function will return the updated values.
+
+## Example
+
+```javascript
+
+// Example usage
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
+];
+
+// Define the search criteria callback function
+const searchCriteria = (value) => value.grade === 'B';
+
+// Call the updateMany function
+const updatedStudents = students.findAllByValueAndUpdate({ id: 2, name: 'Bob', grade: 'B' }, student => student.grade = 'A+');
+console.log(updatedStudents); // [{ id: 2, name: 'Bob', grade: 'A+' }]
+
+
+```
+
+```javascript 
+const numbers = [3,2,4,2,5,3,1,2];
+
+const updatedElements = numbers.findAllByValueAndUpdate(2, num => num * 2);
+console.log(updatedElements)
+// [4, 4, 4]
+```
+
+<hr>
+
+##  `findByValueAndReplace` Function
+
+This function will find and replace one value that matches the provided value.
+
+## Parameters
+
+- `target`: The target value to be updated.
+-  `replaceValue`: the value to be replaced with.
+
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If any elements were replaced, the function will return the replaced index
+
+## Example
+
+```javascript
+
+// Example usage
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
+];
+
+// Define the search criteria callback function
+const searchCriteria = (value) => value.grade === 'B';
+
+// Call the updateMany function
+const updatedStudent = students.findByValueAndReplace({ id: 2, name: 'Bob', grade: 'B' }, {replaced: true});
+console.log(updatedStudent); // 1
+
+console.lot(students);
+// [
+//   { id: 1, name: 'Alice', grade: 'A' },
+//   {replaced: true},
+//   { id: 3, name: 'Charlie', grade: 'C' },
+//   { id: 4, name: 'David', grade: 'B' },
+//   { id: 5, name: 'Eve', grade: 'A' },
+// ]
+
+
+
+```
+
+```javascript 
+const numbers = [3,2,4,2,5,3,1,2];
+
+const updatedElement = numbers.findByValueAndReplace(2, 10);
+console.log(updatedElement)
+// 1
+```
+
+<hr>
+
+
+##  `findAllByValueAndReplace` Function
+
+This function will find and replace all values that matches the provided value.
+
+## Parameters
+
+- `target`: The target value to be updated.
+-  `replaceValue`: the value to be replaced with.
+
+## Return Value
+
+- If no element was found, the function returns `undefined`.
+- If any elements were replaced, the function will return the indexes of the replaced elements.
+
+## Example
+
+```javascript
+
+// Example usage
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
+];
+
+// Define the search criteria callback function
+const searchCriteria = (value) => value.grade === 'B';
+
+// Call the updateMany function
+const updatedStudents = students.findByValueAndReplace({ id: 2, name: 'Bob', grade: 'B' }, {replaced: true});
+console.log(updatedStudents); // [1]
+
+console.lot(students);
+// [
+//   { id: 1, name: 'Alice', grade: 'A' },
+//   {replaced: true},
+//   { id: 3, name: 'Charlie', grade: 'C' },
+//   { id: 4, name: 'David', grade: 'B' },
+//   { id: 5, name: 'Eve', grade: 'A' },
+// ]
+
+
+
+```
+
+```javascript 
+const numbers = [3,2,4,2,5,3,1,2];
+
+const updatedElements = numbers.findByValueAndReplace(2, 10);
+console.log(updatedElements)
+// [1,3,7]
+```
+
+<hr>
+
