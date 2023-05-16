@@ -72,36 +72,43 @@ This function will find and update all elements that matches the searh criteria 
 ## Example
 
 ```javascript
+
 // Example usage
-const array = [1, 2, 3, 4, 5];
-
-const searchCriteria = (value) => value === 3;
-const updateCriteria = (element) => element * 2;
-
-const updatedElement = array.updateOne(searchCriteria, updateCriteria);
-console.log(updatedElement); // Output: 6
-```
-
-```javascript
-// Example usage
-const users = [
-  { id: 1, name: 'Alice', age: 25 },
-  { id: 2, name: 'Bob', age: 30 },
-  { id: 3, name: 'Charlie', age: 35 },
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
 ];
 
 // Define the search criteria callback function
-const searchCriteria = (value) => value.id === 2;
+const searchCriteria = (value) => value.grade === 'B';
 
 // Define the update criteria callback function
-const updateCriteria = (obj) => {
-    obj.age = 31 // Update the age property of the object
+const updateCriteria = (element) => {
+  element.grade = 'A+';
 };
 
-// Call the updateOne function
-const updatedUser = users.updateOne(searchCriteria, updateCriteria);
-console.log(updatedUser); // Output: { id: 2, name: 'Bob', age: 31 }
+// Call the updateMany function
+const updatedStudents = students.updateMany(searchCriteria, updateCriteria);
+console.log(updatedStudents);
+/*
+Output:
+[
+  { id: 2, name: 'Bob', grade: 'A+' },
+  { id: 4, name: 'David', grade: 'A+' }
+]
+*/
 
+```
+
+```javascript 
+const numbers = [3,2,4,2,5,3,1,2];
+
+const updatedElements = numbers.updateMany(el => el > 2, el => el * 2);
+console.log(updatedElements)
+// [6, 8, 10, 6]
 ```
 
 ## notes 
