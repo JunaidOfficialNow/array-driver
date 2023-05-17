@@ -1,3 +1,16 @@
+# Update Methods
+
+<p>Update methods helps us to modify the existing array by updating or replacing array elements</p>
+
+ - [updateOne](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#updateOne-function)
+ - [updateMany](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#updateMany-function)
+ - [replaceOne](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#replaceOne-function)
+ - [replaceMany](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#replaceMany-function)
+ - [findByValueAndUpdate](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#findByValueAndUpdate-function)
+ - [findAllByValueAndUpdate](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#findAllByValueAndUpdate-function)
+ - [findByValueAndReplace](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#findByValueAndReplace-function)
+ - [findAllByValueAndReplace](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md#findAllByValueAndReplace-function)
+
 ##  `updateOne` Function
 
 This function will find and update an element from the array.
