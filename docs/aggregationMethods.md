@@ -219,4 +219,4 @@ console.log(result);
 
 <hr>
 
-[next: deleteMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md)
+<a href = 'https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md' style='text-decoration: none; color: white; float: right;'>See delete methods </a>
