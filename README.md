@@ -1,5 +1,5 @@
 # array-driver
-A simple utility package for manipulating arrays.
+A simple utility package for manipulating arrays. This package contains some useful methods that can save a lot of time during development.
 
 ### Installation
 You can install array-driver using NPM:
@@ -16,90 +16,100 @@ arrayDriver.config();
 ```
 Then start using the functions
 
-```js
-array.findOneAndUpdate(searchValue, updateValue);
-// This function searches for the searchValue in the given array. If it finds the value, it updates it with targetValue and returns true. Otherwise, it returns false.
-
-```
-
-
-### Parameters
-- searchValue (required): The value to search for in the array. <br>
-- targetValue (required): The value to replace the searchValue with, if found. 
-
-### Return Value
-- true - if the searchValue was found and replaced with targetValue. <br>
-- false - if the searchValue was not found in the array.
 
 
 ### Examples
-```js
-const arrayDriver = require('array-driver');
-arrayDriver.config();
+```javascript
 
-
-const myArray = [1, 2, 3, 4];
-
-// can start to use  the functions directly
-const result = myArray.findOneAndUpdate(2, 5);
-
-console.log(myArray); // Output: [1, 5, 3, 4]
-console.log(result); // Output: true
-
-```
-
-### if your value is an object or array pass a callback with search criteria
-```js
-const arrayDriver = require('array-driver');
-arrayDriver.config();
-
-const myArray = [
-  {
-    name: 'junaid',
-    age: 20
-  },
-  {
-    name: 'abin',
-    age: 21,
-  },
-  {
-  name: 'ragesh',
-  age: 22,
-  },
-  {
-    name: 'ajul',
-    age: 30,
-  },
+// Example usage
+const students = [
+  { id: 1, name: 'Alice', grade: 'A' },
+  { id: 2, name: 'Bob', grade: 'B' },
+  { id: 3, name: 'Charlie', grade: 'C' },
+  { id: 4, name: 'David', grade: 'B' },
+  { id: 5, name: 'Eve', grade: 'A' },
 ];
-const updateObject = {
-  name: 'munawer',
-  age: 40,
-}
 
-// pass callback if the searchItem is not primitive value
-const result = myArray.findOneAndUpdate(user => user.name == 'junaid', updateObject);
+// Define the search criteria callback function
+const searchCriteria = (value) => value.grade === 'B';
 
-console.log(myArray);
-//  [
-//  {
-//   name: 'munawer',
-//   age: 40,
-//  },
-//   {
-//     name: 'abin',
-//     age: 21,
-//   },
-//   {
-//   name: 'ragesh',
-//   age: 22,
-//   },
-//   {
-//     name: 'ajul',
-//     age: 30,
-//   },
-// ];
-console.log(result); // Output: true
+// Define the update criteria callback function
+const updateCriteria = (element) => {
+  element.grade = 'A+';
+};
+
+// Call the updateMany function
+const updatedStudents = students.updateMany(searchCriteria, updateCriteria);
+console.log(updatedStudents);
+/*
+Output:
+[
+  { id: 2, name: 'Bob', grade: 'A+' },
+  { id: 4, name: 'David', grade: 'A+' }
+]
+*/
+```
+
+
+
+```javascript
+
+const data = [
+  { name: "Alice", city: "New York", age: 25 },
+  { name: "Bob", city: "New York", age: 30 },
+  { name: "Charlie", city: "San Francisco", age: 25 },
+  { name: "Dave", city: "San Francisco", age: 30 },
+];
+const example1 = data.groupBy('city');
+// Output:
+// {
+//   "New York": [
+//       { name: "Alice", city: "New York", age: 25 },
+//       { name: "Bob", city: "New York", age: 30 }
+//   ],
+//   "San Francisco": [
+//       { name: "Charlie", city: "San Francisco", age: 25 },
+//       { name: "Dave", city: "San Francisco", age: 30 }
+//   ]
+// }
+
 
 ```
+
+
+```javascript
+const arr = [
+  { name: "Charlie", age: 35 },
+  { name: "David", age: 40 },
+  { name: "Eve", age: 45 }
+];
+
+arr.deleteAllWhere(obj => obj.name == 'Charlie');
+console.log(arr);
+//  [
+//   { name: "David", age: 40 },
+//   { name: "Eve", age: 45 }
+// ];
+
+```
+
+
+### types of methods 
+
+ - [aggregationMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/aggregationMethods.md)
+ - [deleteMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md)
+ - [filterMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md)
+ - [selectionMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/selectionMethods.md)
+ - [updateMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md)
+ - [validateMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/validateMethods.md)
+
+
+ [see all the methods available here](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/Main.md)
+
+### Contributions
+- If you wish to contribute on this package, kindly fork and make a pull request.
+- Ideas for more utility functions are welcome.
+
+
 ### License
 This project is licensed under the ISC License - see the LICENSE file for details.
