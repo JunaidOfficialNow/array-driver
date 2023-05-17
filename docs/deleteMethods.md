@@ -192,3 +192,7 @@ console.log(arr);
 
 
 <hr>
+
+<div align='right'>
+  <a href = 'https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/filterMethods.md' >See filter methods </a>
+</div>

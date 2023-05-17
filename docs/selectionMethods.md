@@ -34,3 +34,10 @@ const result2 = arr2.sample();
 
 
 ```
+
+<hr>
+
+
+<div align='right'>
+  <a href = 'https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/updateMethods.md' >See udpate methods </a>
+</div>

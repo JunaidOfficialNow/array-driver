@@ -219,4 +219,6 @@ console.log(result);
 
 <hr>
 
-<a href = 'https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md' style='text-decoration: none; color: white; float: right;'>See delete methods </a>
+<div align='right'>
+  <a href = 'https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md' >See delete methods </a>
+</div>

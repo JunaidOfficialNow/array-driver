@@ -455,3 +455,7 @@ console.log(updatedElements)
 
 <hr>
 
+<div align='right'>
+  <a href = 'https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/validateMethods.md' >See validate methods </a>
+</div>
+
