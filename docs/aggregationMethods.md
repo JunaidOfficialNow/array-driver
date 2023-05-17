@@ -216,3 +216,7 @@ console.log(result);
 ```
 ### notes
 - This function is also compatible with arrays which contain non-primitive values.
+
+<hr>
+
+[next: deleteMethods](https://github.com/JunaidOfficialNow/array-driver/blob/master/docs/deleteMethods.md)
