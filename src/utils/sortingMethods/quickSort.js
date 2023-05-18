@@ -1,3 +1,8 @@
+/**
+ *  This function sort the original array with quicksort algorithm.
+ * @param  isDescend boolean: true for sort in descending order.
+ * @returns the sorted array.
+ */
 module.exports = function quickSort(this, isDescend) {
     if(this.length < 2){
         return this;
