@@ -40,7 +40,7 @@ const result3 = arr3.allElementOfType('string');
 
 ```
 
-## notes 
+### notes 
 
 - Since javascript considers the type of array to be 'object' it will be considered as an object type.
 
