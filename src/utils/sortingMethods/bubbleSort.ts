@@ -16,5 +16,6 @@ export function bubbleSort<T>(this:T[] , isDescend: boolean | undefined): T[] {
         }
       }
     } while (swapped);
+
     return this;
   }

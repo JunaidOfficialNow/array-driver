@@ -3,7 +3,7 @@
  * @param  isDescend boolean: true for sort in descending order.
  * @returns the sorted array.
  */
-module.exports = function selectionSort(this, isDescend) {
+export function selectionSort<T>(this: T[], isDescend: boolean | undefined): T[] {
     const len = this.length;
     for (let i = 0; i < len - 1; i++) {
       let minIndex = i;
