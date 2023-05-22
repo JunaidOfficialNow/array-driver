@@ -3,7 +3,7 @@
  * @param  isDescend boolean: true for sort in descending order.
  * @returns the sorted array.
  */
-module.exports = function bubbleSort(this, isDescend) {
+export function bubbleSort<T>(this: T[], isDescend: boolean | undefined): T[] {
     let swapped;
     do {
       swapped = false;
@@ -16,7 +16,7 @@ module.exports = function bubbleSort(this, isDescend) {
         }
       }
     } while (swapped);
-  
-    const sortedArray = this;
-    sortedArray.forEach((el, index) => (this[index] = el));
+
+    return this;
+
   }

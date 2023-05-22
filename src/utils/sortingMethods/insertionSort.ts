@@ -3,7 +3,7 @@
  * @param  isDescend boolean: true for sort in descending order.
  * @returns the sorted array.
  */
-module.exports = function insertionSort(this, isDescend) {
+export function insertionSort<T>(this: T[], isDescend: boolean | undefined): T[] {
   for(let i=1; i<this.length; i++){
       let numberToInsert = this[i];
       let j = i - 1
@@ -21,5 +21,6 @@ module.exports = function insertionSort(this, isDescend) {
         }
         
         this[j + 1] = numberToInsert;
-  }    
+  }
+  return this;    
 }
