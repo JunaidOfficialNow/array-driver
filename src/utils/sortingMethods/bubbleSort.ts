@@ -1,9 +1,9 @@
 /**
- *  This function sort the original array with bubblesort algorithm.
+ *  This function sort the original array with bubble sort algorithm.
  * @param  isDescend boolean: true for sort in descending order.
  * @returns the sorted array.
  */
-export function bubbleSort<T>(this: T[], isDescend: boolean | undefined): T[] {
+export function bubbleSort<T>(this:T[] , isDescend: boolean | undefined): T[] {
     let swapped;
     do {
       swapped = false;
@@ -18,5 +18,4 @@ export function bubbleSort<T>(this: T[], isDescend: boolean | undefined): T[] {
     } while (swapped);
 
     return this;
-
   }
